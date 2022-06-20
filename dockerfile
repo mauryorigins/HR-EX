@@ -20,6 +20,9 @@ RUN npm install
 # Bundle app source
 COPY . .
 
+# Copy app from src to dist
+RUN npm run build
+
 EXPOSE 4000
 
 CMD [ "node", "./dist/index.js" ]
