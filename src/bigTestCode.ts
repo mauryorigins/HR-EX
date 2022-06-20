@@ -1,5 +1,3 @@
-/* eslint-disable dot-notation */
-
-export default function smallTestCode() {
+export function bigTestCode() {
   console.log('--------------smallTestCode-------------\n');
 }

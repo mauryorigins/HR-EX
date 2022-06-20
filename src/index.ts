@@ -1,9 +1,4 @@
-// import inmutability from './inmutability';
-import bigTestCode from './bigTestCode';
-
-function smallTestCode(){
-  console.log('Do something small');
-}
+import { bigTestCode } from './bigTestCode';
 
 function main() {
   console.log('---------- Cool Programing ----------\n');
@@ -12,3 +7,7 @@ function main() {
 }
 
 main();
+
+function smallTestCode() {
+  console.log('Do something small');
+}

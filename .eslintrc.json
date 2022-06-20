@@ -1,24 +1,25 @@
 {
+  "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
     "es2021": true
   },
-  "extends": ["airbnb-base"],
-  "parser": "@typescript-eslint/parser",
+  "globals": {
+    "In": true
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
   "parserOptions": {
-    "ecmaVersion": 2019,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint"],
   "settings": {
     "import/resolver": {
       "typescript": {}
     }
   },
-  "globals": {
-    "In": true
-  },
   "rules": {
+    "prettier/prettier": "error",
     // Javascript
     "no-console": "off",
     "no-unused-vars": 0,
@@ -27,6 +28,10 @@
     "import/prefer-default-export": "off",
     "import/order": "off",
     "no-unneeded-ternary": "off",
+    "max-len": "off",
+    "object-curly-newline": "off",
+    "no-underscore-dangle": "off",
+    "operator-linebreak": "off",
     "no-restricted-syntax": [
       "error",
       {
@@ -37,8 +42,8 @@
     // Typescript
     "import/extensions": ["error", "ignorePackages", { "ts": "never" }],
     "@typescript-eslint/no-unused-vars": [
-      1,
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+      "warn",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false, "argsIgnorePattern": "_" }
     ]
   }
 }
