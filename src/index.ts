@@ -1,4 +1,4 @@
-import { bigTestCode } from './bigTestCode';
+import { bigTestCode } from 'src/sub1/sub2/bigTestCode';
 
 function main() {
   console.log('---------- Cool Programing ----------\n');
@@ -9,5 +9,5 @@ function main() {
 main();
 
 function smallTestCode() {
-  console.log('Do something small');
+  console.log('Do some small code');
 }
